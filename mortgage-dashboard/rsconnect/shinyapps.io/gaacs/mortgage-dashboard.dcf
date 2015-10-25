@@ -1,0 +1,8 @@
+name: mortgage-dashboard
+account: gaacs
+server: shinyapps.io
+bundleId: 296953
+url: https://gaacs.shinyapps.io/mortgage-dashboard
+when: 1445753808.96778
+asMultiple: FALSE
+asStatic: FALSE
