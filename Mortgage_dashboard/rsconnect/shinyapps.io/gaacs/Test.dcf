@@ -1,0 +1,8 @@
+name: Test
+account: gaacs
+server: shinyapps.io
+bundleId: 295794
+url: https://gaacs.shinyapps.io/Test
+when: 1445645262.95821
+asMultiple: FALSE
+asStatic: FALSE

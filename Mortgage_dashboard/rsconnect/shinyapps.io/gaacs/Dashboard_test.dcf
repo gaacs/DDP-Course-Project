@@ -1,0 +1,8 @@
+name: Dashboard_test
+account: gaacs
+server: shinyapps.io
+bundleId: 296525
+url: https://gaacs.shinyapps.io/Dashboard_test
+when: 1445721262.58325
+asMultiple: FALSE
+asStatic: FALSE
