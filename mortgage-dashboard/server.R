@@ -15,9 +15,9 @@ tp <- sort(unique(base1$IN_CEDIDA))
 
 server <- function(input, output) {
 
-        output$saControl <- renderUI({checkboxGroupInput('sa', 'Amortization status', sa, selected = sa)})
-        output$rgControl <- renderUI({checkboxGroupInput('rg', 'Regimen', rg, selected = rg)})
-        output$tpControl <- renderUI({checkboxGroupInput('tp', 'Back-securities', tp, selected = tp)})
+        output$saControl <- renderUI({checkboxGroupInput('sa', 'Behaviour', sa, selected = sa)})
+        output$rgControl <- renderUI({checkboxGroupInput('rg', 'Tenure', rg, selected = rg)})
+        output$tpControl <- renderUI({checkboxGroupInput('tp', 'MBS issued', tp, selected = tp)})
 
         output$plot1 <- renderPlot({
                 data <- subset(base1, COSECHA >= input$slider[1] & COSECHA <= input$slider[2]

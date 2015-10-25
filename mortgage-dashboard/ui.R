@@ -2,13 +2,11 @@ library(shiny)
 
 ui <- navbarPage("Mortgage portfolio",
                  tabPanel("Dashboard",
-                          sidebarPanel("Controls",
-                                  sliderInput("slider","Year", 1973, 2015, c(2000,2014)),
+                          sidebarPanel(
+                                  sliderInput("slider","Vintage", 1973, 2015, c(2000,2014)),
                                   uiOutput("saControl"),
                                   uiOutput("rgControl"),
                                   uiOutput("tpControl")
-                                  #sliderInput("slider","Year", 1973, 2015, c(2000,2014)),
-                                  
                           ),
                           mainPanel(
                                   tabsetPanel(
