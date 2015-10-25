@@ -2,6 +2,7 @@ library(data.table)
 library(dplyr)
 library(ggplot2)
 library(scales)
+library(markdown)
 library(shiny)
 library(shinydashboard)
 
@@ -83,9 +84,9 @@ server <- function(input, output) {
                                   , RESERVAS = sum(RKP_TOTAL + EPRC_TOTAL + EPRE_TOTAL, na.rm = TRUE)
                                   )
                 ggplot(data, aes(cRP, cRS, size = SALDO_TOTAL/1e6, colour = RESERVAS/N
-                               , label =(paste(sprintf("$%s",format(round(SALDO_TOTAL/1e6), big.mark = ",")),"MdP")))) +
+                               , label =(sprintf("$%s",format(round(SALDO_TOTAL/1e6), big.mark = ","))))) +
                         geom_point(alpha = 0.5) + 
-                        geom_text(size = 3, vjust = 2, color = "black") +
+                        geom_text(size = 4, vjust = 2, color = "black") +
                         theme_bw() +
                         theme(legend.position = "bottom", title = element_text(size = 12), axis.text = element_text(size = 10)) +
                         scale_size(range = c(5, 25), name = "Total Value (MdP)\n", labels = comma) +
